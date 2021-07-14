@@ -4,16 +4,23 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
+
+
 body {margin: 0;
      padding: 0;
      font-family: 'Poppins', sans-serif;}
 
-     /* Top Banner Styles START*/
+     /*=====================
+      Header Styles START
+      =====================*/
+
+
+
 header{
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(2, 1fr);
-    background-color: #2D25A0;
+    background-color: #242424;
     color: white;
     padding-top: 153px;
     padding-bottom: 86px;
@@ -26,10 +33,10 @@ header{
     text-transform: capitalize;
     font-weight: 700;}
 
-.top-picture{
-width: 556px;
-height: 438px;
-transition: transform 1s ease-in-out;
+.top-picture{width: 556px;
+    height: 438px;
+    transition: transform 1s ease-in-out;
+
 }
 
 .top-picture:hover {transform: scale(1.15)
@@ -37,20 +44,22 @@ transition: transform 1s ease-in-out;
 
 .button {
     font-size: 16px;
-    
     color: white;
     font-weight: 500;
     text-decoration: none;
-    
     background-color: #E02C6D;
     padding: 10px 24px;
     transition: 3s;
      } 
-.button:hover {transform: scale(1.2);
-    background-color: rgb(0, 0, 0);
-                color: white;}
 
 
+.button:hover {border-radius: 30px;
+    background-color: rgb(250, 250, 250);
+    color: rgb(0, 0, 0);}
+
+/*^^^^^^^^^^^^^^^^^^ 
+        players
+^^^^^^^^^^^^^^^^^^^ */
 
 .parent-players-detail {display: flex;
                         margin-top:70px;
@@ -71,7 +80,7 @@ transition: transform 1s ease-in-out;
     
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
     margin-bottom: 27px;
-padding: 15px;}
+    padding: 15px;}
 
 .players-photo img {
     width: 300px;
@@ -87,7 +96,69 @@ padding: 15px;}
     margin: 10px 15px;
     color: #6C6C6C;}
 
-    footer {display: flex;
+
+/*---------------------- 
+       bonus-1 
+----------------------*/
+
+.bonus-1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+
+.vote {background-image: url(images/MR.jpg);
+        background-repeat: no-repeat;
+        width: 40%;
+        height: 370px;
+        position: cover;
+        border: 5px solid black;
+        margin-top: 100px;
+        padding-top: 300px ;}
+
+.vote h2 {
+    text-align: center;
+            color: white;
+            text-shadow: 2px 2px #000000;}
+
+.vote input {
+    margin: 5px;
+    padding: 8px 20px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px grey;}
+
+
+
+#your-detail {display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;}
+
+#war  {display: flex;
+        justify-content: center;
+    margin-top: 20px;}
+    
+.war {font-size: 1.4em;
+    font-weight: 700;
+    background-color: rgb(29, 29, 29);
+  padding: 3px 20px;
+  color: white;
+  border-radius: 10px;
+    transition: transform 1s;}
+
+  .war:hover {transform: scale(1.2);}
+
+#vs {font-size: 1.4em;
+        color: white;
+        text-shadow: 2px 2px #000000;
+    padding: 0 10px;}
+
+/*^^^^^^^^^^^^^^^^^^^^^ 
+footer starts from here
+^^^^^^^^^^^^^^^^^^^^^^^  */
+
+footer {display: flex;
         flex-direction: column;
         align-items: center;
         margin: 158px auto 56px;
@@ -103,13 +174,17 @@ padding: 15px;}
 .icon .fab {margin-left: 14px;
              color: gray;
              font-size: 32px;
-        transition: transform .7s;}
+            transition: transform .7s;}
 
 .icon .fab:hover {transform: scale(1.5) translateY(-5px);}
 
+/*------------------------
+        media query 
+----------------------------*/
 
-
-
+/*+++++++++++++++++ 
+        phone 
+++++++++++++++++++ */
 @media only screen and (max-width:688px) {
     header{
         grid-template-columns: repeat(1, 1fr);
@@ -126,5 +201,40 @@ padding: 15px;}
         grid-template-columns: repeat(1, 1fr);
         justify-items: center;
     }   
+    
+
+
 }
 
+/*+++++++++++++++++++++++ 
+        Tablet Devices 
+++++++++++++++++++++++++*/
+@media only screen and (min-width:689px) and (max-width:992px) {
+    header{
+        margin: 0;
+        padding: 0;
+        padding-left: 16px;
+        padding-bottom: 50px;
+    }
+    .top-heading{
+        margin-top: 80px;
+        font-size: 50px;
+    }
+    .top-picture{
+        width: 329px;
+        height: 259px;
+        margin-top: 50px;
+    }
+    .player-grid{
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+    table{
+        font-size: 1em;
+    }   
+    td img{
+        height: 30px;
+    }
+
+    .bonus-1 {display: none;}
+}
